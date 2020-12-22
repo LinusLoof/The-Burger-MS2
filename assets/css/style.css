@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* ------------- locale.html --------------- */
+
 img {
     z-index: -1;
     height: 100%;
@@ -18,19 +22,48 @@ img {
   color: rgb(255, 255, 255);
   text-align: center;
   margin-top: 400px;
-  font-size: 110px;
+  font-size: 120px;
+  font-family: "Permanent Marker";
 }
 
 #local-container {
   border: 1px solid black;
-  background-color: rgba(10, 32, 46, 0.6);
+  background-color: rgba(10, 32, 46, 0.7);
   margin-top: 40px;
-  z-index: -1;
+  z-index: 100;
   margin-left: 60px;
   margin-right: 60px;
 }
 
 
+
+/* ------------- index.html --------------- */
+
+#h2-index {
+  position: fixed;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 400px;
+  font-size: 120px;
+  font-family: "Permanent Marker";
+}
+
+#burger-video {
+  position: fixed;
+  z-index:0;
+}
+
+/* ------------- footer --------------- */
+
+footer {
+  background-color: rgba(10, 32, 46, 0.76);
+  color: #fff;
+}
+
+footer p {
+  font-size: 20px;
+}
 
 /* ------------- menu from https://codepen.io/razitazi/pen/gbXMob ------------------------- */
 
@@ -145,7 +178,7 @@ header.banner {
   width: 100%;
   height: 100%;
 
-  font-family: "Lora", serif;
+  font-family: "Permanent Marker";
 
   transition: opacity .5s, visibility .5s;
   text-align: center;
