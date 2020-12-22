@@ -6,60 +6,176 @@ img {
     top: 0;
 }
 
+#burger-locale {
+  position: absolute;
+  clip: rect(0px,1920px,800px,0px);
+  right: 0;
+}
+
+#h2-local {
+  position: relative;
+  z-index: -1;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 450px;
+  font-size: 100px;
+}
+
+.bar {
+  z-index: 100;
+}
+
+/* ------------- menu from https://codepen.io/razitazi/pen/gbXMob ------------------------- */
 
 
+div {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+button:focus {
+  outline: none;
+}
+/* THAT FIXED HEADER */
+header.banner {
+  position: fixed;
+  top: 0;
+  z-index: 100;
 
-/* ------------ code from https://codepen.io/chenius/pen/zLppVZ ---------------*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .stage{
-    height: 350px;
-    width: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 10000;
-    position: relative;
-  }
-  .p{
-    font-size: 35px;
-    text-align: center;
-    margin-top: 0;
-    cursor: pointer;
-    width: 100%;
-    background: #ff0000;
-    border-radius: 10px;
-    font-family: Century Gothic;
-    letter-spacing: 5px;
-  }
-  .div{
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    width: 200px;
-    height: 40px;
-    margin-top: 4%;
-   transition-duration: 0.2s;
-  
-  }
-  .p:hover{
-    background: rgb(255, 255, 255);
-    color: black;
-  }
-  .div:nth-child(odd){
-    transform: perspective(300px) rotateY(45deg);
-    box-shadow: -2px 2px 7px gray;
-  }
-  .div:nth-child(even){
-    transform: perspective(300px) rotateY(-45deg);
-      box-shadow: 2px 2px 7px gray;
-  }
-  .div:hover{
-    transform: rotateY(0);
-    background: rgb(255, 0, 0);
-    color: black;
-    box-shadow: 0px 0px 0px;
-  }
-  
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+/* MENU TOGGLE ICON */
+#menu-toggle {
+  position: relative;
+
+  width: 51px;
+  height: 51px;
+  z-index: 1000;
+  cursor: pointer;
+
+  border: 1px solid #fff;
+  -webkit-border-radius: 50px;
+     -moz-border-radius: 50px;
+          border-radius: 50px;
+  background: transparent;
+}
+#menu-toggle:before,
+#menu-toggle:after {
+  position: absolute;
+
+  content: "";
+  content: "";
+  -webkit-transition: all .350s ease;
+     -moz-transition: all .350s ease;
+       -o-transition: all .350s ease;
+          transition: all .350s ease;
+
+  background-color: #fff;
+}
+
+#menu-toggle:before {
+  top: 12px;
+  left: 25px;
+
+  width: 1px;
+  height: 27px;
+}
+#menu-toggle:after {
+  top: 25px;
+  left: 12px;
+
+  width: 27px;
+  height: 1px;
+}
+#menu-toggle:hover:before,
+#menu-toggle:hover:after {
+  -webkit-transform: rotate(5deg);
+      -ms-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+.open #menu-toggle:before,
+.open #menu-toggle:after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+/* A COMES AFTER B */
+.brand {
+  float: right;
+  height: 51px;
+
+  font-size: 70px;
+  font-weight: 100;
+  line-height: .6;
+}
+.brand a {
+  -webkit-transition: all .350s ease;
+     -moz-transition: all .350s ease;
+       -o-transition: all .350s ease;
+          transition: all .350s ease;
+  text-decoration: none;
+
+  color: #ccc;
+}
+.brand a:hover {
+  cursor: pointer;
+
+  color: #fff;
+}
+.open .brand {
+  color: #fff;
+}
+/* OVERLAY MENU */
+#menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  display: table;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+
+  font-family: "Lora", serif;
+
+  transition: opacity .5s, visibility .5s;
+  text-align: center;
+
+  opacity: 0;
+  background-color: rgba(0, 0, 0, .85);
+}
+.open #menu {
+  visibility: visible;
+
+  opacity: 1;
+}
+#menu ul {
+  display: table-cell;
+  padding: 0;
+  margin-top: 100px;
+
+  list-style: none;
+
+  vertical-align: middle;
+}
+
+#menu ul li a {
+  display: block;
+
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 120px;
+
+  -webkit-transition: all .3s ease;
+     -moz-transition: all .3s ease;
+       -o-transition: all .3s ease;
+          transition: all .3s ease;
+  text-decoration: none;
+
+  color: #fff;
+}
+#menu ul li a:hover {
+  font-size: 70px;
+}
