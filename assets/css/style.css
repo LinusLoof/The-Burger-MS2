@@ -17,13 +17,20 @@ img {
   z-index: -1;
   color: rgb(255, 255, 255);
   text-align: center;
-  margin-top: 450px;
-  font-size: 100px;
+  margin-top: 400px;
+  font-size: 110px;
 }
 
-.bar {
-  z-index: 100;
+#local-container {
+  border: 1px solid black;
+  background-color: rgba(10, 32, 46, 0.6);
+  margin-top: 40px;
+  z-index: -1;
+  margin-left: 60px;
+  margin-right: 60px;
 }
+
+
 
 /* ------------- menu from https://codepen.io/razitazi/pen/gbXMob ------------------------- */
 
@@ -52,7 +59,7 @@ header.banner {
 
   width: 51px;
   height: 51px;
-  z-index: 1000;
+  z-index: 100000;
   cursor: pointer;
 
   border: 1px solid #fff;
